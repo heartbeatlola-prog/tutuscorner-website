@@ -444,3 +444,57 @@ footer p{
     }
 
 }
+
+/* ===========================
+   MOBILE MENU
+=========================== */
+
+.menu-toggle{
+    display:none;
+    font-size:2rem;
+    color:white;
+    cursor:pointer;
+    margin-left:auto;
+}
+
+/* Mobile Styles */
+
+@media (max-width:768px){
+
+    nav{
+        flex-wrap:wrap;
+        padding:20px 0;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav ul{
+        width:100%;
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+
+        max-height:0;
+        overflow:hidden;
+        transition:max-height .5s ease;
+    }
+
+    nav ul.active{
+        max-height:400px;
+        margin-top:20px;
+    }
+
+    .shop-btn{
+        display:none;
+    }
+
+    .hero-content{
+        width:90%;
+    }
+
+    .hero-content h1{
+        font-size:2.8rem;
+    }
+}
