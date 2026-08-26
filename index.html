@@ -3,323 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutu's Corner | Perfumes & Jewelry</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Mayor × Faith ❤️</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
+    <!-- BACKGROUND -->
+    <div class="glow glow-red"></div>
+    <div class="glow glow-purple"></div>
 
-<header>
 
-<nav>
+    <!-- =========================
+         START SCREEN
+    ========================== -->
 
-<div class="logo">
+    <section id="startScreen" class="screen active">
 
-<img src="images/logo.jpg" alt="Logo">
+        <div class="logo">
+            MAYOR <span>×</span> FAITH
+        </div>
 
-<h2>Tutu's Corner</h2>
+        <div class="heart-circle">
+            ❤️
+        </div>
 
-</div>
+        <p class="eyebrow">
+            WELCOME TO OUR STORY
+        </p>
 
-<ul>
+        <h1>
+            How Well Do<br>
+            <span>You Know Us?</span>
+        </h1>
 
-<li><a href="#">Home</a></li>
+        <p class="intro">
+            15 questions. Memories, inside jokes,
+            stubbornness and moments only we understand.
+        </p>
 
-<li><a href="#">Collections</a></li>
+        <div class="rules">
 
-<li><a href="#">About</a></li>
+            <div>
+                ❤️
+                <span>3 Lives</span>
+            </div>
 
-<li><a href="#">Testimonials</a></li>
+            <div>
+                🧠
+                <span>15 Questions</span>
+            </div>
 
-<li><a href="#">Contact</a></li>
+            <div>
+                🏆
+                <span>100% = Final Unlock</span>
+            </div>
 
-</ul>
+        </div>
 
-<a href="#" class="shop-btn">Shop Now</a>
+        <button id="startBtn" class="main-btn">
+            START OUR STORY →
+        </button>
 
-</nav>
+        <p class="warning">
+            No cheating 👀
+        </p>
 
-</header>
+    </section>
 
-<!-- ================= HERO ================= -->
 
-<section class="hero">
+    <!-- =========================
+         QUIZ SCREEN
+    ========================== -->
 
-<div class="overlay"></div>
+    <section id="gameScreen" class="screen">
 
-<div class="hero-content">
+        <div class="game-wrapper">
 
-<h1>Luxury Beyond Imagination</h1>
+            <!-- TOP BAR -->
 
-<p>
-Discover premium perfumes and timeless jewelry
-crafted to bring elegance, confidence and sophistication
-to every occasion.
-</p>
+            <div class="top-bar">
 
-<a href="#" class="btn">Explore Collection</a>
+                <div class="round-info">
+                    <span id="roundName">
+                        MEMORY LANE
+                    </span>
 
-</div>
+                    <small id="questionNumber">
+                        1 / 15
+                    </small>
+                </div>
 
-</section>
+                <div id="lives">
+                    ❤️ ❤️ ❤️
+                </div>
 
-<!-- ================= COLLECTIONS ================= -->
+            </div>
 
-<section class="collections">
 
-<h2>Our Luxury Collections</h2>
+            <!-- PROGRESS -->
 
-<div class="collection-container">
+            <div class="progress">
 
-<div class="collection-card">
-<img src="images/best sellers.jpeg">
-<h3>Signature Perfumes</h3>
-<p>Exclusive fragrances loved by our customers.</p>
-</div>
+                <div id="progressBar"></div>
 
-<div class="collection-card">
-<img src="images/men collection.jpeg">
-<h3>Men's Collection</h3>
-<p>Luxury fragrances for gentlemen.</p>
-</div>
+            </div>
 
-<div class="collection-card">
-<img src="images/women collection.jpeg">
-<h3>Women's Collection</h3>
-<p>Elegant perfumes for every woman.</p>
-</div>
 
-<div class="collection-card">
-<img src="images/jewelries.jpeg">
-<h3>Luxury Jewelry</h3>
-<p>Necklaces, bracelets, rings and earrings.</p>
-</div>
+            <!-- QUESTION -->
 
-<div class="collection-card">
-<img src="images/watches.jpeg">
-<h3>Luxury Watches</h3>
-<p>Timeless accessories with premium style.</p>
-</div>
+            <div class="question-area">
 
-<div class="collection-card">
-<img src="images/gift.jpeg">
-<h3>Gift Sets</h3>
-<p>Perfect gifts for loved ones.</p>
-</div>
+                <p id="difficulty">
+                    EASY
+                </p>
 
-<div class="collection-card">
-<img src="images/new arrivals.jpeg">
-<h3>New Arrivals</h3>
-<p>Fresh arrivals added every week.</p>
-</div>
+                <h2 id="question">
+                    Question
+                </h2>
 
-<div class="collection-card">
-<img src="images/best sellers.jpeg">
-<h3>Best Sellers</h3>
-<p>Our most loved products.</p>
-</div>
+                <p id="questionHint"></p>
 
-<div class="collection-card">
-<img src="images/limited.jpeg">
-<h3>Limited Edition</h3>
-<p>Rare and exclusive collections.</p>
-</div>
+            </div>
 
-<div class="collection-card">
-<img src="images/premium.jpeg">
-<h3>Premium Collection</h3>
-<p>The finest luxury products available.</p>
-</div>
 
-</div>
+            <!-- ANSWERS -->
 
-</section>
+            <div id="answers" class="answers"></div>
 
-<!-- ================= WHY CHOOSE US ================= -->
 
-<section class="why-us">
+            <!-- FEEDBACK -->
 
-<h2>Why Choose Us</h2>
+            <div id="feedback"></div>
 
-<div class="features">
 
-<div class="feature">
-<h3>100% Authentic</h3>
-<p>Only genuine perfumes and jewelry.</p>
-</div>
+            <!-- NEXT -->
 
-<div class="feature">
-<h3>Luxury Packaging</h3>
-<p>Beautiful packaging for every order.</p>
-</div>
+            <button id="nextBtn" class="next-btn">
+                NEXT →
+            </button>
 
-<div class="feature">
-<h3>Fast Delivery</h3>
-<p>Reliable nationwide delivery.</p>
-</div>
+        </div>
 
-<div class="feature">
-<h3>Affordable Luxury</h3>
-<p>Premium quality at great prices.</p>
-</div>
+    </section>
 
-</div>
 
-</section>
+    <!-- =========================
+         RESULT SCREEN
+    ========================== -->
 
-<!-- ================= FOUNDER ================= -->
+    <section id="resultScreen" class="screen">
 
-<section class="founder">
+        <div class="result-wrapper">
 
-<div class="founder-image">
+            <div id="resultEmoji" class="result-emoji">
+                🏆
+            </div>
 
-<img src="images/mom.jpg" alt="Founder">
+            <p class="eyebrow">
+                STORY COMPLETE
+            </p>
 
-</div>
+            <h1 id="resultTitle">
+                You did it.
+            </h1>
 
-<div class="founder-text">
+            <div class="score-circle">
 
-<h2>Meet Our Founder</h2>
+                <span id="finalScore">
+                    0
+                </span>
 
-<p>
+                <small>
+                    / 15
+                </small>
 
-Welcome to Luxury Essence.
+            </div>
 
-Our passion is helping every customer discover
-beautiful perfumes and elegant jewelry that
-express confidence, beauty and sophistication.
+            <h3 id="rank">
+                LORE KEEPER
+            </h3>
 
-Every product is carefully selected to ensure
-excellent quality and an unforgettable luxury
-experience.
+            <p id="resultMessage">
+                Message
+            </p>
 
-Thank you for supporting our business.
+            <button id="restartBtn" class="main-btn">
+                PLAY AGAIN ↻
+            </button>
 
-</p>
+            <button id="secretBtn" class="secret-btn">
+                🔐 OPEN SECRET MESSAGE
+            </button>
 
-<a href="#" class="btn">Read More</a>
+        </div>
 
-</div>
+    </section>
 
-</section>
 
-<!-- ================= TESTIMONIALS ================= -->
+    <!-- =========================
+         SECRET SCREEN
+    ========================== -->
 
-<section class="testimonials">
+    <section id="secretScreen" class="screen">
 
-<h2>Customer Reviews</h2>
+        <div class="secret-wrapper">
 
-<div class="testimonial-container">
+            <div class="secret-lock">
+                🔐
+            </div>
 
-<div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>"Absolutely amazing perfumes. They last all day!"</p>
-<h4>- Mayokun</h4>
-</div>
+            <p class="eyebrow">
+                UNLOCKED
+            </p>
 
-<div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>"Beautiful jewelry with premium quality."</p>
-<h4>- Grace</h4>
-</div>
+            <h1>
+                For Faith ❤️
+            </h1>
 
-<div class="testimonial">
-⭐⭐⭐⭐⭐
-<p>"Excellent customer service and fast delivery."</p>
-<h4>- Tade</h4>
-</div>
+            <p class="secret-text">
 
-</div>
+                Six years of knowing each other.
 
-</section>
+                <br><br>
 
-<!-- ================= INSTAGRAM ================= -->
+                Countless conversations.
+                Random moments.
+                Inside jokes.
+                Arguments.
+                Laughing.
+                Being stubborn.
+                And memories that somehow
+                became our story.
 
-<section class="gallery">
+                <br><br>
 
-<h2>TikTok Gallery</h2>
+                And then there was sign-out...
 
-<div class="gallery-container">
+                <br><br>
 
-<img src="images/chain.jpg">
+                Two shy people holding hands,
+                knowing that it might be a long time
+                before they saw each other again.
 
-<img src="images/perfumes.jpg">
+                <br><br>
 
-<img src="images/chain2.jpg">
+                Some moments are small when they happen,
+                but become huge when you look back.
 
-<img src="images/chain2.jpg">
+                ❤️
 
-<img src="images/gift.jpeg">
+            </p>
 
-<img src="images/insta.jpeg">
+            <p class="signature">
+                — Mayor
+            </p>
 
-</div>
+            <button id="backBtn" class="secret-btn">
+                ← BACK TO SCORE
+            </button>
 
-</section>
+        </div>
 
-<!-- ================= CONTACT ================= -->
+    </section>
 
-<section class="contact">
 
-<h2>Contact Us</h2>
+    <div id="confetti"></div>
 
-<p>📍 Your Business Address</p>
 
-<p>📞 +234 808 287 2669</p>
-
-<p>📧 heartbeatlol@gmail.com</p>
-
-<p>📱 WhatsApp: +234 808 287 2669</p>
-
-<a href="#" class="btn">Chat on WhatsApp</a>
-
-<a href="https://wa.me/2348082872669?text=Hello!%20I%20am%20interested%20in%20your%20luxury%20perfumes%20and%20jewelry.%20Could%20you%20please%20assist%20me%20with%20your%20collection%3F" class="btn" target="_blank">
-    💬 Shop via WhatsApp
-</a>
-
-<a href="https://www.tiktok.com/@tutuscorner" target="_blank" class="btn">
-    🎵 Follow Us on TikTok
-</a>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-<h2>Tutu's Corner</h2>
-
-<p>Luxury Perfumes • Elegant Jewelry • Timeless Beauty</p>
-
-<p>© 2026 Luxury Essence. All Rights Reserved.</p>
-
-</footer>
-
-<script>
-const menuToggle = document.querySelector(".menu-toggle");
-const navMenu = document.querySelector("nav ul");
-
-menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-
-    if (navMenu.classList.contains("active")) {
-        menuToggle.innerHTML = "&times;";
-    } else {
-        menuToggle.innerHTML = "&#9776;";
-    }
-});
-</script>
-
-</body>
-</html>
+    <script src="script.js"></script>
 
 </body>
 </html>
